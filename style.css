@@ -313,6 +313,43 @@ section {
 }
 
 
+.body-two{
+  background-color: #005037;
+}
+
+@media only screen and (max-width: 480px) {
+  .menu {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #244d61;
+  }
+
+  header {
+    padding: 0.7rem 1rem;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  nav {
+    position: absolute;
+    display: grid;
+    top: 75px;
+    width: calc(100% - 40px);
+    text-align: center;
+    background-color: #fff;
+    left: -100%;
+  }
+
+  #click:checked ~ nav {
+    left: 0%;
+    transition: all 0.3s ease;
+  }
+
+  section {
+    margin: 1rem 1.5rem;
+  }
+}
 /*jkjwa*/
 @media (max-width: 1366px) {
   html {
@@ -322,7 +359,6 @@ section {
 @media (max-width: 768px) {
   html {
     font-size: 62%;
-    position: relative;
   }
 }
 @media (max-width: 450px) {
