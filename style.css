@@ -341,6 +341,10 @@ section {
     left: -100%;
   }
 
+  .navbar-dsans {
+    align-items: baseline;
+  }
+
   #click:checked ~ nav {
     left: 0%;
     transition: all 0.3s ease;
@@ -365,4 +369,44 @@ section {
   html {
     font-size: 55%;
   }
+  .menu {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #244d61;
+  }
+
+  header {
+    padding: 0.7rem 1rem;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  nav {
+    position: absolute;
+    display: flex;
+    top: 75px;
+    width: calc(100% - 40px);
+    text-align: center;
+    background-color: #fff;
+    left: -100%;
+  }
+
+  .navbar-dsans {
+    align-items: baseline;
+    display: flex;
+  }
+
+  .icon {
+    padding: 50%;
+  }
+  #click:checked ~ nav {
+    left: 0%;
+    transition: all 0.3s ease;
+  }
+
+  section {
+    margin: 1rem 1.5rem;
+  }
 }
+
