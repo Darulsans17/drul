@@ -185,7 +185,7 @@ nav a {
   color: #e4e400;
 }
 
-.icon {
+.icon  {
   background-color: var(--primary);
   padding: 3px;
   justify-content: center;
@@ -397,8 +397,9 @@ section {
     display: flex;
   }
 
-  .icon {
+  .icon a {
     padding: 50%;
+    position : fixed;
   }
   #click:checked ~ nav {
     left: 0%;
