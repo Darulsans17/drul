@@ -42,6 +42,18 @@ nav a {
   padding: 10rem;
   padding: 0.4rem 1rem;
 }
+#check {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  right: 5%;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
 
 .navbar-dsans {
   font-family: "Rubik", sans-serif;
@@ -320,12 +332,100 @@ nav a:hover {
   html {
     font-size: 75%;
   }
+  header {
+    padding: 1.3rem 5%;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  header {
+    padding: 1.3rem 5%;
+  }
+
+  .icon {
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .icon a {
+    color: #ffffff;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+}
+@media (max-width: 790px) {
   html {
     font-size: 62%;
   }
+  .menu {
+    display: inline-flex;
+  }
+  #check:checked ~ .menu #icon-menu {
+    display: none;
+  }
+  .menu #close-menu {
+    display: none;
+  }
+  #check:checked ~ .menu #close-menu {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgb (255, 255, 255, 15);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+    transition: 0.2s ease;
+    text-align: center;
+  }
+  #check:checked ~ .nav-list {
+    height: 17.7rem;
+  }
+  .nav-list a {
+    display: block;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: translateY(0);
+  }
+
+  .icon {
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .icon a {
+    color: #ffffff;
+    padding: 5.5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
 }
+
 @media (max-width: 450px) {
   html {
     font-size: 55%;
