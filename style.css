@@ -1,6 +1,7 @@
 :root {
   --primary: #00c889;
   --bg: #005037;
+  --AA: #ffffff;
 }
 
 /* Reset CSS */
@@ -12,14 +13,10 @@
   border: none;
   text-decoration: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 /* Style kepala */
-
-
 header {
   background-color: var(--bg);
   padding-top: 10px; /* Padding atas */
@@ -28,7 +25,6 @@ header {
   padding-left: 10px; /* Padding kiri */
   text-align: center;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   color: rgb(0, 0, 0);
@@ -36,10 +32,6 @@ body {
 }
 
 /* Style navigasi */
-nav {
-  background-color: var(--primary);
-}
-
 
 nav a {
   color: #ffffff;
@@ -88,17 +80,9 @@ nav a {
   padding: 0.4rem 1rem;
 }
 
-#click {
-  display: none;
-}
 .navbar-dsans a :hover::after {
   transform: scaleX(0.5);
 }
-
-.daftar-nav {
-  background-color: var(--bg);
-}
-
 .navbar-dsans a.active,
 .navbar-dsans a:hover {
   background-color: var(--bg);
@@ -111,25 +95,59 @@ nav a {
   display: none;
 }
 
-.menu {
-  display: none;
+.nav-list {
+  padding-inline-start: 0%;
+  padding: 10px;
+  padding: 0.4rem 1rem 0.4rem 1rem;
 }
 
-.daftar-nav {
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  font-family: "Rubik", sans-serif;
-  align-items: center;
+.nav-list a {
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.97rem;
   font-weight: 600;
   letter-spacing: 0.7px;
-  background-color: #ffffff;
-  padding-top: 0%;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 0%;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-list a :hover {
+  color: var(--bg);
+  border-radius: 1rem;
+  transition: all.3s ease-in-out;
+}
+/* Style logo nav */
+
+.logo-dsans {
+  color: var(--bg);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+  font-variant-position: super;
+}
+
+.logo-dsans:hover {
+  font-size: 2.1rem;
+  color: #ffffff;
+}
+
+.logo-dsans span {
+  color: #fff;
+}
+
+.logo-dsans span:hover {
+  font-size: 2.1rem;
+  color: #e4e400;
+}
+#click {
+  display: none;
+}
+
+.menu {
+  display: none;
 }
 
 .input[type="text"] {
@@ -160,46 +178,26 @@ nav a {
   width: 280px;
 }
 
-/* Style logo nav */
-
-.logo-dsans {
-  color: var(--bg);
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: italic;
-  text-decoration: none;
-  font-variant-position: super;
-}
-
-.logo-dsans:hover {
-  font-size: 2.1rem;
-  color: #ffffff;
-}
-
-.logo-dsans span {
-  color: #fff;
-}
-
-.logo-dsans span:hover {
-  font-size: 2.1rem;
-  color: #e4e400;
-}
-
-.icon  {
-  background-color: var(--primary);
-  padding: 3px;
+.icon {
+  background-color: var(--bg);
   justify-content: center;
   align-items: center;
-  border-radius: 0px;
-
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 0px 0px 0px 0px;
 }
 
 .icon a {
   color: #ffffff;
-  padding: 150px ;
+  padding: 10px;
   justify-content: center;
   align-items: center;
-  
+  margin: 10px 100px 5px 150px;
+  padding: 1px 0px 0px 0px;
 }
 
 .icon a:hover {
@@ -218,28 +216,29 @@ nav a:hover {
   border-radius: 1rem;
   transition: all.3s ease-in-out;
 }
+/* Nav end */
 
-/* Nav */
-
-
-
-section {
+/* body */
+.section1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--bg);
   padding: 0%;
 }
 
 .main {
-  padding: 10px;
+  padding: 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  margin: 0.5rem ;
+  margin: 5.5rem;
   border-radius: 10px;
+  border: #e4e400;
+  background-color: #ffffff;
+  margin: 0.5%;
 }
 
 .main h1 {
@@ -262,7 +261,7 @@ section {
 }
 
 .main p {
-  color: #000000;
+  color: var(--bg);
   margin-top: 0.3rem;
   font-size: 1.4rem;
   padding-left: 20px;
@@ -298,7 +297,7 @@ section {
 
 .social a:hover {
   color: var(--primary);
-  background-color:#000000;
+  background-color: #000000;
   transition: all 0.3s ease-in-out;
 }
 
@@ -312,8 +311,7 @@ section {
   background-position: 0 -75px;
 }
 
-
-.body-two{
+.body-two {
   background-color: #005037;
 }
 
@@ -399,7 +397,6 @@ section {
 
   .icon a {
     padding: 50%;
-    position : fixed;
   }
   #click:checked ~ nav {
     left: 0%;
@@ -410,4 +407,3 @@ section {
     margin: 1rem 1.5rem;
   }
 }
-
